@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Abhiram Kidambi - Portfolio Website" />
+  <title>Contact | Abhiram Kidambi</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>
+      Have a question, opportunity, or collaboration idea?  
+      Feel free to reach out using the form below or email me directly at  
+      <a href="mailto:abhikid@berkeley.edu">abhikid@berkeley.edu</a>.
+    </p>
+
+    <!-- Contact Form -->
+    <form onsubmit="handleSubmit(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Resume Download -->
+    <div class="resume-link">
+      <h3>Want to see my resume?</h3>
+      <a href="assets/Abhiram_Kidambi_Resume.pdf" download class="button">Download My Resume</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Abhiram Kidambi | <a href="mailto:abhikid@berkeley.edu">abhikid@berkeley.edu</a></p>
+  </footer>
+</body>
+</html>
