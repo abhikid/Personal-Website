@@ -3,58 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Abhiram Kidambi - Personal Portfolio and Projects" />
-  <title>Abhiram Kidambi | Home</title>
+  <title>Abhiram Kidambi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
 </head>
-
 <body>
-  <!-- Header and Navigation -->
+  <div class="grain"></div>
+  <div class="ambient-glow"></div>
+
   <header>
     <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+      <span class="nav-logo">AK</span>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </nav>
   </header>
 
-  <!-- Introduction Section -->
-  <section id="intro">
-    <div class="intro-container">
-      <img src="assets/profile.jpeg" alt="Abhiram Kidambi" class="profile-pic" />
-      <h1>Hi, I’m <span class="highlight">Abhiram Kidambi</span>.</h1>
-      <p>
-        I’m an <strong>EECS student at UC Berkeley</strong> passionate about building systems, games, and software that combine 
-        creativity and engineering. I love exploring computer architecture, game design, and full-stack web development.
-      </p>
-
-      <h3>My Interests & Hobbies</h3>
-      <ul>
-        <li>Programming small games and interactive projects</li>
-        <li>Engineering design and robotics competitions</li>
-        <li>Exploring UI/UX design through Figma prototypes</li>
-        <li>Content creation centered around my cooking, especially <strong>pizza making</strong></li>
-        <li>Watching esports and playing strategy games</li>
-      </ul>
-
-      <a href="projects.html" class="button">View My Projects</a>
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="eyebrow"><span class="dot"></span> EECS @ UC Berkeley · Dean's List</p>
+        <h1>Abhiram<br><span class="outline-text">Kidambi</span></h1>
+        <p class="hero-sub">Building AI systems, autonomous driving simulations, and full-stack applications. Researcher · Engineer · Founder.</p>
+        <div class="hero-cta">
+          <a href="projects.html" class="btn-primary">View Projects</a>
+          <a href="contact.html" class="btn-ghost">Get in touch ↗</a>
+        </div>
+        <div class="hero-links">
+          <a href="https://linkedin.com/in/abhi-kidambi" target="_blank">LinkedIn</a>
+          <a href="https://github.com/abhikid" target="_blank">GitHub</a>
+          <a href="mailto:abhikid@berkeley.edu">Email</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="profile-wrapper">
+          <img src="assets/profile.jpeg" alt="Abhiram Kidambi" class="profile-pic" />
+          <div class="profile-ring"></div>
+        </div>
+        <div class="stat-cards">
+          <div class="stat">
+            <span class="stat-num">3.74</span>
+            <span class="stat-label">GPA</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">4+</span>
+            <span class="stat-label">Roles</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Languages: Java, C, Python, JavaScript, MATLAB</li>
-      <li>Web Dev: HTML5, CSS3, React.js, Node.js</li>
-      <li>Tools: GitHub, VSCode, Figma, Linux</li>
-    </ul>
+  <section id="experience">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">// 01</span>
+        <h2>Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="tl-date">Jan 2026 – Present</span>
+            <span class="tl-type research">Research</span>
+          </div>
+          <div class="timeline-content">
+            <h3>AI Undergraduate Researcher</h3>
+            <p class="tl-org">UC Berkeley SCALE Lab</p>
+            <p class="tl-desc">Architecting a Monte Carlo simulation framework modeling vehicle navigation as a discrete-time MDP, simulating 10,000 stochastic trajectories for collision-risk analysis in autonomous driving environments.</p>
+            <div class="tl-tags"><span>Autonomous Driving</span><span>Monte Carlo</span><span>Python</span><span>MDP</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="tl-date">Jan 2026 – Present</span>
+            <span class="tl-type engineering">Engineering</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Software Engineer Intern</h3>
+            <p class="tl-org">HireLab.ai</p>
+            <p class="tl-desc">Developing an ML-based resume grading system using supervised learning and similarity modeling, improving recruiter-aligned ranking accuracy by <strong>95%</strong>.</p>
+            <div class="tl-tags"><span>ML</span><span>NLP</span><span>Python</span><span>Vectorization</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="tl-date">Jan 2026 – Present</span>
+            <span class="tl-type engineering">Engineering</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Software Engineering Developer</h3>
+            <p class="tl-org">Berkeley ASUC</p>
+            <p class="tl-desc">Building backend services for Berkeley's study-space platform — scraping, validation pipelines, and database schemas to track real-time room occupancy data.</p>
+            <div class="tl-tags"><span>Backend</span><span>APIs</span><span>Databases</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="tl-date">Jun 2025 – Present</span>
+            <span class="tl-type founder">Founder</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Founder & CTO</h3>
+            <p class="tl-org">CoinVision</p>
+            <p class="tl-desc">Designing a modular financial analytics backend ingesting BTC, ETH, and NASDAQ datasets with automated ETL pipelines and quantitative feature generation for volatility and momentum.</p>
+            <div class="tl-tags"><span>FastAPI</span><span>Python</span><span>ETL</span><span>FinTech</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="tl-date">Jun 2024 – Aug 2024</span>
+            <span class="tl-type research">Research</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Research Intern</h3>
+            <p class="tl-org">University of Southern California</p>
+            <p class="tl-desc">Analyzed flutter instability in bridges and aircraft with Prof. Amin Ghadami. Formulated nonlinear aeroelastic models that delayed instability onset by double-digit percentages.</p>
+            <div class="tl-tags"><span>MATLAB</span><span>Aeroelastics</span><span>Simulation</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Footer -->
+  <section id="skills">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">// 02</span>
+        <h2>Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>Languages</h4>
+          <div class="skill-pills"><span>Java</span><span>C</span><span>Python</span><span>JavaScript</span><span>SQL</span><span>MATLAB</span></div>
+        </div>
+        <div class="skill-group">
+          <h4>Frameworks</h4>
+          <div class="skill-pills"><span>React</span><span>Node.js</span><span>Express</span><span>Django</span><span>FastAPI</span><span>MongoDB</span></div>
+        </div>
+        <div class="skill-group">
+          <h4>ML & Data</h4>
+          <div class="skill-pills"><span>LSTM</span><span>Supervised Learning</span><span>NumPy</span><span>ETL Pipelines</span></div>
+        </div>
+        <div class="skill-group">
+          <h4>Design & Tools</h4>
+          <div class="skill-pills"><span>Figma</span><span>Git</span><span>Linux</span><span>SolidWorks</span><span>CAD</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="awards">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">// 03</span>
+        <h2>Recognition</h2>
+      </div>
+      <div class="awards-row">
+        <div class="award-card"><span class="award-icon">🚀</span><p>NASA JPL Invention Challenge</p><span class="award-place">4th Place</span></div>
+        <div class="award-card"><span class="award-icon">🏆</span><p>Bay Math League Competition</p><span class="award-place">1st Place</span></div>
+        <div class="award-card"><span class="award-icon">⚡</span><p>Solar Regatta</p><span class="award-place">3rd Place</span></div>
+        <div class="award-card"><span class="award-icon">🎓</span><p>UC Berkeley Dean's List</p><span class="award-place">College of Engineering</span></div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 Abhiram Kidambi | <a href="mailto:abhikid@berkeley.edu">abhikid@berkeley.edu</a></p>
+    <div class="footer-inner">
+      <span class="footer-logo">AK</span>
+      <p>Abhiram Kidambi · Berkeley, CA · <a href="mailto:abhikid@berkeley.edu">abhikid@berkeley.edu</a></p>
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/abhi-kidambi" target="_blank">LinkedIn</a>
+        <a href="https://github.com/abhikid" target="_blank">GitHub</a>
+      </div>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

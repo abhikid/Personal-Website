@@ -3,55 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Abhiram Kidambi - Portfolio Website" />
   <title>Contact | Abhiram Kidambi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
-
 <body>
-  <!-- Header and Navigation -->
+  <div class="grain"></div>
+  <div class="ambient-glow"></div>
+
   <header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="index.html" class="nav-logo">AK</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
     </nav>
   </header>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>
-      Have a question, opportunity, or collaboration idea?  
-      Feel free to reach out using the form below or email me directly at  
-      <a href="mailto:abhikid@berkeley.edu">abhikid@berkeley.edu</a>.
-    </p>
-
-    <!-- Contact Form -->
-    <form onsubmit="handleSubmit(event)">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="your@email.com" required />
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-
-    <!-- Resume Download -->
-    <div class="resume-link">
-      <h3>Want to see my resume?</h3>
-      <a href="assets/Abhiram_Kidambi_Resume.pdf" download class="button">Download My Resume</a>
+  <section id="contact-page">
+    <div class="section-inner contact-layout">
+      <div class="contact-left">
+        <span class="section-tag">// Contact</span>
+        <h1>Let's<br><span class="outline-text">Connect</span></h1>
+        <p class="page-sub">Have a question, opportunity, or project idea? I'd love to hear from you.</p>
+        <div class="contact-direct">
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a href="mailto:abhikid@berkeley.edu">abhikid@berkeley.edu</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://linkedin.com/in/abhi-kidambi" target="_blank">linkedin.com/in/abhi-kidambi</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <a href="https://github.com/abhikid" target="_blank">github.com/abhikid</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Location</span>
+            <span>Berkeley, CA</span>
+          </div>
+        </div>
+        <div class="resume-section">
+          <p class="resume-label">// Resume</p>
+          <a href="assets/Abhiram_Kidambi_Resume.pdf" download class="btn-primary">Download Resume ↓</a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="What's on your mind?" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width">Send Message →</button>
+          <div id="form-status"></div>
+        </form>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Abhiram Kidambi | <a href="mailto:abhikid@berkeley.edu">abhikid@berkeley.edu</a></p>
+    <div class="footer-inner">
+      <span class="footer-logo">AK</span>
+      <p>Abhiram Kidambi · Berkeley, CA · <a href="mailto:abhikid@berkeley.edu">abhikid@berkeley.edu</a></p>
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/abhi-kidambi" target="_blank">LinkedIn</a>
+        <a href="https://github.com/abhikid" target="_blank">GitHub</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
