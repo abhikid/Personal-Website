@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abhiram Kidambi</title>
+  <meta name="description" content="Abhiram Kidambi’s engineering and research portfolio: cross-runtime agent tracing at Amazon, autonomous-driving research at Berkeley, and software projects." />
+  <title>Abhiram Kidambi | Engineering &amp; Research</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
@@ -17,7 +18,7 @@
       <span class="nav-logo">AK</span>
       <div class="nav-links">
         <a href="index.html" class="active">Home</a>
-        <a href="projects.html">Projects</a>
+        <a href="projects.html">Portfolio</a>
         <a href="contact.html">Contact</a>
       </div>
     </nav>
@@ -28,14 +29,14 @@
       <div class="hero-left">
         <p class="eyebrow"><span class="dot"></span> Electrical Engineering and Computer Science @ UC Berkeley</p>
         <h1>Abhiram<br><span class="outline-text">Kidambi</span></h1>
-        <p class="hero-sub">Building AI systems, autonomous driving simulations, and full-stack applications. Researcher · Engineer · Founder.</p>
+        <p class="hero-sub">Building traceable AI systems and faster simulations. Engineering at Amazon Lab126, autonomous-driving research at UC Berkeley, and full-stack software.</p>
         <div class="hero-cta">
-          <a href="projects.html" class="btn-primary">View Projects</a>
+          <a href="projects.html" class="btn-primary">Explore Portfolio</a>
           <a href="contact.html" class="btn-ghost">Get in touch ↗</a>
         </div>
         <div class="hero-links">
-          <a href="https://linkedin.com/in/abhi-kidambi" target="_blank">LinkedIn</a>
-          <a href="https://github.com/abhikid" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/abhi-kidambi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/abhikid" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="mailto:abhikid@berkeley.edu">Email</a>
         </div>
       </div>
@@ -46,12 +47,12 @@
         </div>
         <div class="stat-cards">
           <div class="stat">
-            <span class="stat-num">4+</span>
-            <span class="stat-label">Roles</span>
+            <span class="stat-num">11</span>
+            <span class="stat-label">Teams supported at Amazon</span>
           </div>
           <div class="stat">
-            <span class="stat-num">5+</span>
-            <span class="stat-label">Projects</span>
+            <span class="stat-num">40×</span>
+            <span class="stat-label">Simulation speedup</span>
           </div>
         </div>
       </div>
@@ -65,6 +66,19 @@
         <h2>Experience</h2>
       </div>
       <div class="timeline">
+        <div class="timeline-item" id="amazon">
+          <div class="timeline-meta">
+            <span class="tl-date">Jun 2026 – Aug 2026</span>
+            <span class="tl-type engineering">Engineering</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Software Development Engineer Intern</h3>
+            <p class="tl-org">Amazon · Lab126</p>
+            <ul class="experience-bullets"><li>Shipped Amazon’s first tool for tracing agent chaining across different runtimes (Strands, Bedrock, AgentCore, and Lambda), implemented as 6 packages across Python and Java, eliminating a debugging blind spot affecting 11 engineering teams</li><li>Designed cross-runtime identity propagation to capture execution context at call initiation, enabling reliable traceability for long-running and fire-and-forget agent calls</li><li>Integrated cross-agent tracing with the platform’s pause-and-resume durability mechanism, preserving trace continuity and preventing duplicate activity records across interrupted and resumed executions</li></ul>
+            <div class="tl-tags"><span>Python</span><span>Java</span><span>Agent Tracing</span><span>Distributed Systems</span></div>
+          </div>
+        </div>
+
         <div class="timeline-item">
           <div class="timeline-meta">
             <span class="tl-date">Jan 2026 – Present</span>
@@ -73,8 +87,9 @@
           <div class="timeline-content">
             <h3>AI Undergraduate Researcher</h3>
             <p class="tl-org">UC Berkeley SCALE Lab</p>
-            <p class="tl-desc">Architecting a Monte Carlo simulation framework modeling vehicle navigation as a discrete-time MDP, simulating 10,000 stochastic trajectories for collision-risk analysis in autonomous driving environments.</p>
+            <p class="tl-desc">Developed probabilistic autonomous-driving simulations under PhD researcher Aniruddha Joshi, advised by Prof. Sanjit Seshia. Built a modular Monte Carlo framework running <strong>10,000 stochastic trajectories across 200 time steps</strong> to estimate collision risk. Parallelized rollouts and vectorized state updates to reduce runtime from <strong>4 hours to 6 minutes (≈40× faster)</strong>.</p>
             <div class="tl-tags"><span>Autonomous Driving</span><span>Monte Carlo</span><span>Python</span><span>MDP</span></div>
+            <a class="work-link" href="projects.html#research">Explore the research →</a>
           </div>
         </div>
         <div class="timeline-item">
@@ -175,8 +190,8 @@
       <span class="footer-logo">AK</span>
       <p>Abhiram Kidambi · Berkeley, CA · <a href="mailto:abhikid@berkeley.edu">abhikid@berkeley.edu</a></p>
       <div class="footer-links">
-        <a href="https://linkedin.com/in/abhi-kidambi" target="_blank">LinkedIn</a>
-        <a href="https://github.com/abhikid" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/abhi-kidambi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/abhikid" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
   </footer>

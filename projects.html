@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Abhiram Kidambi</title>
+  <meta name="description" content="Selected engineering and research by Abhiram Kidambi, including Amazon agent tracing, autonomous-driving simulations, and full-stack applications." />
+  <title>Portfolio | Abhiram Kidambi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
@@ -17,7 +18,7 @@
       <a href="index.html" class="nav-logo">AK</a>
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="projects.html" class="active">Projects</a>
+        <a href="projects.html" class="active">Portfolio</a>
         <a href="contact.html">Contact</a>
       </div>
     </nav>
@@ -26,16 +27,44 @@
   <section id="projects-page">
     <div class="section-inner">
       <div class="page-hero">
-        <span class="section-tag">// Projects</span>
-        <h1>Things I've <span class="outline-text">Built</span></h1>
-        <p class="page-sub">A selection of projects spanning systems programming, AI, and full-stack development.</p>
+        <span class="section-tag">// Portfolio</span>
+        <h1>Engineering &amp;<br><span class="outline-text">Research</span></h1>
+        <p class="page-sub">Selected work in agent observability, probabilistic simulation, and software engineering.</p>
       </div>
+
+      <nav class="portfolio-jump" aria-label="Portfolio sections">
+        <a href="#agent-tracing">Amazon engineering ↓</a><a href="#research">Research ↓</a><a href="#software">Software projects ↓</a>
+      </nav>
+      <article class="work-study" id="agent-tracing">
+        <p class="eyebrow">Amazon · Lab126 / Jun – Aug 2026</p>
+        <h2>Tracing agents across runtimes</h2>
+        <p class="work-role">Software Development Engineer Intern</p>
+        <ul class="experience-bullets"><li>Shipped Amazon’s first tool for tracing agent chaining across different runtimes (Strands, Bedrock, AgentCore, and Lambda), implemented as 6 packages across Python and Java, eliminating a debugging blind spot affecting 11 engineering teams</li><li>Designed cross-runtime identity propagation to capture execution context at call initiation, enabling reliable traceability for long-running and fire-and-forget agent calls</li><li>Integrated cross-agent tracing with the platform’s pause-and-resume durability mechanism, preserving trace continuity and preventing duplicate activity records across interrupted and resumed executions</li></ul>
+        <div class="tl-tags"><span>Strands</span><span>Bedrock</span><span>AgentCore</span><span>Lambda</span><span>Python</span><span>Java</span></div>
+      </article>
+      <article class="work-study" id="research">
+        <p class="eyebrow">UC Berkeley · SCALE Lab / Jan 2026 – Present</p>
+        <h2>Quantifying collision risk in autonomous driving</h2>
+        <p class="work-role">AI Undergraduate Researcher · Working under Aniruddha Joshi, advised by Prof. Sanjit Seshia</p>
+        <div class="research-metrics" aria-label="Research results">
+          <div><strong>10,000</strong><span>stochastic trajectories</span></div>
+          <div><strong>200</strong><span>time steps per trajectory</span></div>
+          <div><strong>4 hr → 6 min</strong><span>≈40× simulation speedup</span></div>
+        </div>
+        <div class="study-details">
+          <div><h3>Research problem</h3><p>Estimate collision probability in grid-based driving environments with randomly seeded obstacles.</p></div>
+          <div><h3>My contribution</h3><p>Engineered a modular Monte Carlo simulation framework that models vehicle navigation as a discrete-time Markov decision process (MDP).</p></div>
+          <div><h3>Performance</h3><p>Parallelized rollouts and vectorized state updates, reducing simulation runtime from four hours to six minutes.</p></div>
+        </div>
+        <div class="tl-tags"><span>Python</span><span>Monte Carlo</span><span>MDP</span><span>Parallel Computing</span><span>Autonomous Driving</span></div>
+      </article>
+      <div class="section-header" id="software"><h2>Software projects</h2></div>
 
       <div class="projects-grid">
 
         <div class="project-card featured">
           <div class="project-img-wrap">
-            <img src="assets/pizza-finder.png" alt="Yelp Pizzeria Finder" />
+            <img loading="lazy" src="assets/pizza-finder.png" alt="Yelp Pizzeria Finder" />
             <div class="project-overlay">
               <span class="proj-lang">React / Node.js</span>
             </div>
@@ -52,7 +81,7 @@
 
         <div class="project-card featured">
           <div class="project-img-wrap">
-            <img src="assets/wordnet.png" alt="WordNet Graph Processor" />
+            <img loading="lazy" src="assets/wordnet.png" alt="WordNet Graph Processor" />
             <div class="project-overlay">
               <span class="proj-lang">Java</span>
             </div>
@@ -69,7 +98,7 @@
 
         <div class="project-card">
           <div class="project-img-wrap">
-            <img src="assets/antsbees.png" alt="Ants vs. SomeBees" />
+            <img loading="lazy" src="assets/antsbees.png" alt="Ants vs. SomeBees" />
             <div class="project-overlay">
               <span class="proj-lang">Python</span>
             </div>
@@ -86,7 +115,7 @@
 
         <div class="project-card">
           <div class="project-img-wrap">
-            <img src="assets/tileengine.png" alt="Tile Engine" />
+            <img loading="lazy" src="assets/tileengine.png" alt="Tile Engine" />
             <div class="project-overlay">
               <span class="proj-lang">Java</span>
             </div>
@@ -103,7 +132,7 @@
 
         <div class="project-card">
           <div class="project-img-wrap">
-            <img src="assets/2048.png" alt="2048 Game" />
+            <img loading="lazy" src="assets/2048.png" alt="2048 Game" />
             <div class="project-overlay">
               <span class="proj-lang">Java</span>
             </div>
@@ -120,7 +149,7 @@
 
         <div class="project-card">
           <div class="project-img-wrap">
-            <img src="assets/snakegame.png" alt="Snake Game" />
+            <img loading="lazy" src="assets/snakegame.png" alt="Snake Game" />
             <div class="project-overlay">
               <span class="proj-lang">C</span>
             </div>
@@ -144,8 +173,8 @@
       <span class="footer-logo">AK</span>
       <p>Abhiram Kidambi · Berkeley, CA · <a href="mailto:abhikid@berkeley.edu">abhikid@berkeley.edu</a></p>
       <div class="footer-links">
-        <a href="https://linkedin.com/in/abhi-kidambi" target="_blank">LinkedIn</a>
-        <a href="https://github.com/abhikid" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/abhi-kidambi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/abhikid" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
   </footer>

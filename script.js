@@ -1,13 +1,3 @@
-// Form submission
-function handleSubmit(e) {
-  e.preventDefault();
-  const status = document.getElementById('form-status');
-  if (status) {
-    status.textContent = '✓ Message sent! I\'ll get back to you soon.';
-    e.target.reset();
-  }
-}
-
 // Intersection Observer for scroll animations
 const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
 const observer = new IntersectionObserver((entries) => {
@@ -20,6 +10,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   // Animate timeline items on scroll
   document.querySelectorAll('.timeline-item, .project-card, .award-card, .skill-group').forEach((el, i) => {
     el.style.opacity = '0';
