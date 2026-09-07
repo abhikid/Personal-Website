@@ -953,3 +953,18 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Original research figures retain their full axes, legends, and proportions. */
+.research-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+.research-figure { min-width: 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.research-figure > a { display: flex; align-items: center; background: white; aspect-ratio: 1; }
+.research-figure img { display: block; width: 100%; height: auto; }
+.research-figure-wide { grid-column: 1 / -1; }
+.research-figure-wide > a { aspect-ratio: auto; }
+.research-figure figcaption { padding: 1.25rem; }
+.research-figure h3 { font-size: 1.1rem; margin-bottom: 0.6rem; }
+.research-figure p { color: var(--text-muted); line-height: 1.7; }
+.research-figure figcaption a { display: inline-block; color: var(--accent); font-size: 0.875rem; margin-top: 0.8rem; }
+@media (max-width: 700px) {
+  .research-gallery { grid-template-columns: 1fr; }
+}
