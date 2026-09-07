@@ -968,3 +968,15 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 @media (max-width: 700px) {
   .research-gallery { grid-template-columns: 1fr; }
 }
+
+.gallery-heading { font-family: var(--font-display); font-size: 1.25rem; margin: 2rem 0 1rem; }
+.landscape-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.landscape-gallery .research-figure > a { aspect-ratio: 10 / 7; }
+.results-gallery { grid-template-columns: minmax(0, 1fr); }
+.results-gallery .research-figure:not(.research-figure-wide) { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center; }
+@media (max-width: 900px) {
+  .landscape-gallery { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .results-gallery .research-figure:not(.research-figure-wide) { grid-template-columns: 1fr; }
+}
