@@ -44,22 +44,38 @@
       </article>
       <article class="work-study" id="research">
         <p class="eyebrow">UC Berkeley · SCALE Lab / Jan 2026 – Present</p>
-        <h2>Quantifying collision risk in autonomous driving</h2>
+        <h2>Finding rare failures in noisy navigation</h2>
         <p class="work-role">AI Undergraduate Researcher · Working under Aniruddha Joshi, advised by Prof. Sanjit Seshia</p>
-        <div class="research-metrics" aria-label="Research results">
-          <div><strong>10,000</strong><span>stochastic trajectories</span></div>
-          <div><strong>200</strong><span>time steps per trajectory</span></div>
-          <div><strong>4 hr → 6 min</strong><span>≈40× simulation speedup</span></div>
+        <p class="research-intro">How can a route succeed in thousands of simulations and still fail? My current roundabout experiments explore how random disturbances push a simplified vehicle off its intended path—and how much sampling it takes to uncover those rare collisions.</p>
+        <div class="research-metrics" aria-label="Completed experiment results">
+          <div><strong>485,016</strong><span>trials to collect 10 failures at ε = 0.13</span></div>
+          <div><strong>180</strong><span>saved collisions across combined sweeps</span></div>
+          <div><strong>4.07×</strong><span>measured speedup with all paths stored</span></div>
+        </div>
+        <div class="research-gallery navigation-gallery">
+          <figure class="research-figure research-figure-wide">
+            <a href="assets/research/roundabout-trajectories.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size figure: From a planned route to noisy trajectories"><img src="assets/research/roundabout-trajectories.png" alt="Side-by-side roundabout diagrams showing the nominal route and a bundle of noisy trajectories reaching the right exit." width="2080" height="1120" loading="lazy" decoding="async" /></a>
+            <figcaption><h3>From a planned route to noisy trajectories</h3><p>The left panel shows the noiseless route through three motion modes: approach, diagonal passage, and right exit. The right shows the first 80 paths from a 1,000-run experiment at noise intensity T = 0.02. All 1,000 exited in this run; that observation does not establish zero collision risk.</p><a href="assets/research/roundabout-trajectories.png" target="_blank" rel="noopener noreferrer">View full-size figure ↗</a></figcaption>
+          </figure>
+          <figure class="research-figure">
+            <a href="assets/research/roundabout-failure-trajectories.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size figure: The rare paths that fail"><img src="assets/research/roundabout-failure-trajectories.png" alt="Forty selected failure trajectories in shades of blue ending at collision markers around the inner obstacle and outer wall." width="1620" height="1620" loading="lazy" decoding="async" /></a>
+            <figcaption><h3>The rare paths that fail</h3><p>Ten collision paths at each noise amplitude ε = 0.16, 0.15, 0.14, and 0.13. Darker blue indicates smaller disturbances; crosses mark first collisions. At ε = 0.13, collecting ten failures required 485,016 trials in the completed run.</p><a href="assets/research/roundabout-failure-trajectories.png" target="_blank" rel="noopener noreferrer">View full-size figure ↗</a></figcaption>
+          </figure>
+          <figure class="research-figure">
+            <a href="assets/research/roundabout-collision-map.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size figure: Where failures concentrate"><img src="assets/research/roundabout-collision-map.png" alt="Roundabout wall heatmap showing the strongest concentration of selected collisions on the southeast face of the central island." width="1620" height="1620" loading="lazy" decoding="async" /></a>
+            <figcaption><h3>Where failures concentrate</h3><p>Across 180 saved collisions from the combined sweeps, 139 hit the island’s southeast face. Color encodes counts of selected first collisions along the walls. These pooled counts describe the collected failure paths, not unconditional collision probabilities.</p><a href="assets/research/roundabout-collision-map.png" target="_blank" rel="noopener noreferrer">View full-size figure ↗</a></figcaption>
+          </figure>
         </div>
         <div class="study-details">
-          <div><h3>Research problem</h3><p>Estimate collision probability in grid-based driving environments with randomly seeded obstacles.</p></div>
-          <div><h3>My contribution</h3><p>Engineered a modular Monte Carlo simulation framework that models vehicle navigation as a discrete-time Markov decision process (MDP).</p></div>
-          <div><h3>Performance</h3><p>Parallelized rollouts and vectorized state updates, reducing simulation runtime from four hours to six minutes.</p></div>
+          <div><h3>Modeling the route</h3><p>Three linear motion modes guide a point vehicle through the approach, diagonal passage, and exit. Independent Brownian disturbances perturb its position; Euler–Maruyama steps approximate the continuous-time dynamics.</p></div>
+          <div><h3>Capturing rare failures</h3><p>Run independent trials until ten collisions are collected at each noise amplitude. Stop each path at its first collision or exit, and map the collision locations to understand how failures occur.</p></div>
+          <div><h3>Making experiments faster</h3><p>Vectorized trajectory storage and safe-segment checks reduce collision-checking overhead. A path-storage benchmark fell from 2.709 to 0.666 seconds (4.07×), using medians of three runs on the same machine.</p></div>
         </div>
-        <div class="tl-tags"><span>Python</span><span>Monte Carlo</span><span>MDP</span><span>Parallel Computing</span><span>Autonomous Driving</span></div>
+        <p class="research-note">Model scope: a point vehicle without heading, inertia, or size. Results use a 0.005 time step and a 12-unit horizon; boundary crossings between samples can be missed. These experiments characterize the numerical model rather than certify real-world driving safety.</p>
+        <div class="tl-tags"><span>Python</span><span>NumPy</span><span>Monte Carlo</span><span>Stochastic Dynamics</span><span>Rare-Event Simulation</span></div>
       </article>
       <article class="work-study" id="particle-dynamics">
-        <p class="eyebrow">UC Berkeley · SCALE Lab / Computational experiments</p>
+        <p class="eyebrow">UC Berkeley · SCALE Lab / Earlier experiments</p>
         <h2>Exploring stochastic particle dynamics</h2>
         <p class="work-role">Studying how energy geometry and random noise shape particle motion with Python and NumPy. Selected outputs from my 2D Langevin experiments.</p>
         <h3 class="gallery-heading">Three energy geometries</h3>

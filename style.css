@@ -980,3 +980,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 @media (max-width: 600px) {
   .results-gallery .research-figure:not(.research-figure-wide) { grid-template-columns: 1fr; }
 }
+
+/* Navigation experiments: full plots with uncropped axes and legends. */
+.navigation-gallery .research-figure > a { aspect-ratio: auto; }
+.research-intro { font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; max-width: 78ch; }
+.research-note { color: var(--text-muted); font-size: 0.875rem; line-height: 1.7; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 2px solid var(--border-accent); }
